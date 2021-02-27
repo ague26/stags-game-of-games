@@ -9,6 +9,7 @@ function App() {
         <p>
           Stags Game of Games
         </p>
+        <span>Can You Find it?</span>
         <a
           className="App-link"
           href="https://reactjs.org"
