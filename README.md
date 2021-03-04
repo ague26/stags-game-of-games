@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/ague26/stags-game-of-games.svg?branch=main)](https://travis-ci.org/ague26/stags-game-of-games)
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
