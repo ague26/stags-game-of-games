@@ -10,7 +10,7 @@ import firebase from "firebase/app";
 
 // Set the configuration for your app
 // TODO: Replace with your project's config object
-var config = {
+const config = {
   apiKey: "apiKey",
   authDomain: "stag-game-of-games.firebaseapp.com",
   // For databases not in the us-central1 location, databaseURL will be of the
