@@ -28,9 +28,9 @@ ReactDOM.render(
   
   (<BrowserRouter>
     <Switch>
-         <Route exact path="/" component={App}/>
-         <Route path="/can-you-find-it" component={Game}/>
-         {/* <Route path="/contact-us" component={ContactUs}/> */}
+      <Route exact path="/" component={App}/>
+      <Route path="/can-you-find-it" component={Game}/>
+      {/* <Route path="/contact-us" component={ContactUs}/> */}
     </Switch>
   </BrowserRouter>)
   ,document.getElementById('root')
