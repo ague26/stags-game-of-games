@@ -1,0 +1,7 @@
+language: node_js
+node_js:
+  - "12"
+scripts:
+  - npm run lint
+notifications:
+  slack: off-the-blackboard:jRnSl052p8jz7ZALo7LfCrVu
