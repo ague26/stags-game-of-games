@@ -62,8 +62,9 @@ function Cyfi(){
     const snapshotrefAnswers = await refAnswers.once("value");
     let answer = (snapshotrefAnswers.val());
     setanswer(answer);
+
+    setrevealAnswer(false);
    
-    console.log(listQ); 
     if (listQ.length === 0) {
       alert("I hope you liked the game :)");
     }
