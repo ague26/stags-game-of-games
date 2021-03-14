@@ -52,19 +52,15 @@ function Cyfi(){
   };
   const nextQuestion = async()=>{
     let random = await getRandomNumber();
-
     let refQuestions = database.ref(`games/cyfi/Questions/${random}`);
     const snapshotrefQuestions = await refQuestions.once("value");
     let user = (snapshotrefQuestions.val());
     setQuestion(user);
-
     let refAnswers = database.ref(`games/cyfi/Answers/${random}`);
     const snapshotrefAnswers = await refAnswers.once("value");
     let answer = (snapshotrefAnswers.val());
     setanswer(answer);
-
     setrevealAnswer(false);
-   
     if (listQ.length === 0) {
       alert("I hope you liked the game :)");
     }
@@ -87,12 +83,10 @@ function Cyfi(){
       <div>
         <p>{question}</p>
       </div>
-      <p>create another function for the post render state. The pre render function are used once on load. Do not try and waste time and figuring the dependency. It wont work b/c getrandom fucntion will reset the number of total children it has.  </p>
+      {/* <p>create another function for the post render state. The pre render function are used once on load. Do not try and waste time and figuring the dependency. It wont work b/c getrandom fucntion will reset the number of total children it has.  </p> */}
       <div>
+        <p id="answer">{(revealAnswer === true) ? answer : null}</p>
         <button onClick={revealButton}>Reveal Answer</button>
-        { ( revealAnswer === true ) ? answer : null }
-      </div>
-      <div>
         <button onClick={nextQuestion}>Next Question</button>
       </div>
     </div>
