@@ -1,4 +1,4 @@
-import logo from '../logo.svg';
+import logo from '../stag.gif';
 import '../App.css';
 import React, { Link } from "react-router-dom";
 
@@ -7,9 +7,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-            Stag Game of Games
-        </p>
+        <p>Stag Game of Games</p>
         <Link to="/can-you-find-it">Can You Find it?</Link>
       </header>
     </div>
