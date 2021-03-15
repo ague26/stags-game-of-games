@@ -17,7 +17,7 @@
   color: white;
 }
 
-p {
+.App-header p {
   font-size: 60px;
   margin-bottom: 100px;
   font-family: cursive;
