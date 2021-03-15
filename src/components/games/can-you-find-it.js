@@ -1,6 +1,7 @@
 import React, { useEffect,useState } from 'react';
 import firebase from "firebase/app";
 import 'firebase/database';
+import { Animated } from 'react-animated-css';
 
 function Cyfi(){
   const database = firebase.database();
@@ -74,7 +75,9 @@ function Cyfi(){
   },[]);
   return (
     <div>
-      <h1>Can You Find It Game</h1>
+      <Animated animationIn="bounceInDown" animationOut="fadeOut" isVisible={true}>
+        <h1>Can You Find It?</h1>
+      </Animated>
       <div>
         <p>{question}</p>
       </div>
