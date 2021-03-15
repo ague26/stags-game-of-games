@@ -17,13 +17,16 @@ h1 {
 p {
   color: #ffff;
   font-size: 25px;
-  padding-left: 20px;
   text-align: center;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+#buttons {
+  text-align: center;
 }
 
 button {
@@ -39,8 +42,8 @@ button {
   height: 42px;
   border: solid thin rgb(251, 212, 76);
   border-radius: 25px;
-  position: relative;
-  margin-left: 100px;
+  margin-left: 30px;
+  margin-right: 40px;
   transition: .15s all;
   outline: none;
 }
