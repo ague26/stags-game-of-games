@@ -84,10 +84,12 @@ function Cyfi(){
       {/* <p>create another function for the post render state. The pre render function are used once on load. Do not try and waste time and figuring the dependency. It wont work b/c getrandom fucntion will reset the number of total children it has.  </p> */}
       <div>
         <p id="answer">{(revealAnswer === true) ? answer : null}</p>
-        <div id="buttons">
-          <button onClick={revealButton}>Reveal Answer</button>
-          <button onClick={nextQuestion}>Next Question</button>
-        </div>
+        <Animated animationIn="bounceInUp" animationOut="fadeOut" isVisible={true}>
+          <div id="buttons">
+            <button onClick={revealButton}>Reveal Answer</button>
+            <button onClick={nextQuestion}>Next Question</button>
+          </div>
+        </Animated>
       </div>
     </div>
   );
