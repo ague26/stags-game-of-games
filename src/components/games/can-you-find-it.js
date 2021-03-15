@@ -4,17 +4,13 @@ import 'firebase/database';
 
 function Cyfi(){
   const database = firebase.database();
-
   const [ question, setQuestion ] = useState("");
   const [ answer,setanswer ] = useState("");
   const [ revealAnswer, setrevealAnswer ] = useState(false);
   const [ usedQ, setusedQ] = useState([]);
   const [ randomInt, setrandomInt ] = useState("");
   const [ listQ, setlistQ ] = useState(null);
-
-  const revealButton=() => {
-    setrevealAnswer(true);
-  };
+  const revealButton = () => setrevealAnswer(true);
   const getRandomNumber = async()=>{
     let refQuestionsObject = database.ref(`games/cyfi/Questions`);
     const snapshotQuestionObject = await refQuestionsObject.once("value");
@@ -22,7 +18,7 @@ function Cyfi(){
     let randomNumber =  Math.floor(Math.random() * Math.floor(numChildren));
     if(listQ === null){
       null;
-    }else{
+    } else {
       const index = listQ.indexOf(randomInt);
       if (index > -1) {
         listQ.splice(index, 1);
@@ -32,7 +28,7 @@ function Cyfi(){
     setrandomInt(randomNumber);
     return randomNumber;
   };
-  const fetchData = async()=>{
+  const fetchData = async () => {
     const randomNumber = await getRandomNumber(); 
     setrandomInt(randomNumber);
     let pushtoArray =  usedQ.concat(randomNumber);
@@ -44,7 +40,6 @@ function Cyfi(){
     const snapshotrefQuestions = await refQuestions.once("value");
     let user = (snapshotrefQuestions.val());
     setQuestion(user);
-
     let refAnswers = database.ref(`games/cyfi/Answers/${randomNumber}`);
     const snapshotrefAnswers = await refAnswers.once("value");
     let answer = (snapshotrefAnswers.val());
@@ -86,8 +81,10 @@ function Cyfi(){
       {/* <p>create another function for the post render state. The pre render function are used once on load. Do not try and waste time and figuring the dependency. It wont work b/c getrandom fucntion will reset the number of total children it has.  </p> */}
       <div>
         <p id="answer">{(revealAnswer === true) ? answer : null}</p>
-        <button onClick={revealButton}>Reveal Answer</button>
-        <button onClick={nextQuestion}>Next Question</button>
+        <div id="buttons">
+          <button onClick={revealButton}>Reveal Answer</button>
+          <button onClick={nextQuestion}>Next Question</button>
+        </div>
       </div>
     </div>
   );

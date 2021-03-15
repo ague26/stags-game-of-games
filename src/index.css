@@ -40,11 +40,8 @@ button {
   border: solid thin rgb(251, 212, 76);
   border-radius: 25px;
   position: relative;
-  top: 50%;
-  left: 31%;
   margin-left: 100px;
   transition: .15s all;
-  float: center;
   outline: none;
 }
 
