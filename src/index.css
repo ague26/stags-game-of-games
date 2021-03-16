@@ -19,12 +19,20 @@ p {
   font-size: 25px;
   text-align: center;
 }
-pre{
+
+#question {
+  text-align: center;
+}
+
+pre {
   color: #ffff;
   font-size: 25px;
   font-family: inherit;
-  text-align: center;
+  text-align: left;
+  display: inline-block;
+  line-height: 40px;
 }
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
