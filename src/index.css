@@ -23,6 +23,7 @@ pre{
   color: #ffff;
   font-size: 25px;
   font-family: inherit;
+  text-align: center;
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
