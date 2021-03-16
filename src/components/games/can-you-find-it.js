@@ -61,6 +61,7 @@ function Cyfi(){
       alert("I hope you liked the game :)");
     }
   };
+  let r = /\W+(?=[A-Z][a-z])/g;  
   useEffect(async() => {
     let refQuestionsObject = database.ref(`games/cyfi/Questions`);
     const snapshotQuestionObject = await refQuestionsObject.once("value");
@@ -79,9 +80,8 @@ function Cyfi(){
         <h1>Can You Find It?</h1>
       </Animated>
       <div>
-        <p>{question}</p>
+        <pre>{question.replaceAll(r, '$&\n')}</pre>
       </div>
-      {/* <p>create another function for the post render state. The pre render function are used once on load. Do not try and waste time and figuring the dependency. It wont work b/c getrandom fucntion will reset the number of total children it has.  </p> */}
       <div>
         <p id="answer">{(revealAnswer === true) ? answer : null}</p>
         <Animated animationIn="bounceInUp" animationOut="fadeOut" isVisible={true}>
