@@ -18,7 +18,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "jest --config jest.config.js",
     "lint": "eslint ./src",
     "lint:fix": "eslint ./src --fix",
     "eject": "react-scripts eject"
