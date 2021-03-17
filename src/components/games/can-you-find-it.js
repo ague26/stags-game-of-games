@@ -2,6 +2,7 @@ import React, { useEffect,useState } from 'react';
 import firebase from "firebase/app";
 import 'firebase/database';
 import { Animated } from 'react-animated-css';
+import { replaceAll } from '../../utils/replaceAll';
 
 function Cyfi(){
   const database = firebase.database();
@@ -80,7 +81,7 @@ function Cyfi(){
         <h1>Can You Find It?</h1>
       </Animated>
       <div id="question">
-        <pre>{question.replaceAll(r, '$&\n')}</pre>
+        <pre>{replaceAll(question, r)}</pre>
       </div>
       <div>
         <p id="answer">{(revealAnswer === true) ? answer : null}</p>
