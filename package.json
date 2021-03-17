@@ -18,7 +18,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "jest --config jest.config.js",
+    "test": "npx jest --config jest.config.js",
     "lint": "eslint ./src",
     "lint:fix": "eslint ./src --fix",
     "eject": "react-scripts eject"
@@ -44,7 +44,6 @@
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "eslint": "^7.21.0",
-    "eslint-plugin-react": "^7.22.0",
-    "jest": "^26.6.3"
+    "eslint-plugin-react": "^7.22.0"
   }
 }
