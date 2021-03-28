@@ -20,6 +20,9 @@
     "build": "react-scripts build",
     "test:unit": "npx jest --config jest.config.js",
     "test:component": "react-scripts test",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
+    "cypress:run:ci": "start-server-and-test start http://localhost:3000 cypress:run",
     "lint": "eslint ./src",
     "lint:fix": "eslint ./src --fix",
     "eject": "react-scripts eject"
