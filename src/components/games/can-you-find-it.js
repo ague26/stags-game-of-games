@@ -87,8 +87,8 @@ function Cyfi(){
         <p id="answer">{(revealAnswer === true) ? answer : null}</p>
         <Animated animationIn="bounceInUp" animationOut="fadeOut" isVisible={true}>
           <div id="buttons">
-            <button onClick={revealButton}>Reveal Answer</button>
-            <button onClick={nextQuestion}>Next Question</button>
+            <button data-cy="reveal-button" onClick={revealButton}>Reveal Answer</button>
+            <button data-cy="next-question-button" onClick={nextQuestion}>Next Question</button>
           </div>
         </Animated>
       </div>
