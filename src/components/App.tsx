@@ -1,6 +1,7 @@
+import React from 'react';
 import logo from '../stag.gif';
 import '../App.css';
-import React, { Link } from "react-router-dom";
+import  { Link } from 'react-router-dom';
 
 function App() {
   return (
